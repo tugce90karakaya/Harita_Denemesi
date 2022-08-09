@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Harita_Denemesi">
 
         <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCVR2Zjzgd-nn2vC4lrt0R3lj2mWsVDuek"></meta-data>
+            android:value="API_ANAHTARI"></meta-data>
 
         <activity
             android:name=".MainActivity"
