@@ -135,16 +135,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         LatLng latlng= new LatLng(location.getLatitude(),location.getLongitude());
                         MarkerOptions markerOptions = new MarkerOptions().position(latlng).title("Buradasınız");
 
-                        Geocoder geocoder = new Geocoder((MainActivity.this));
-
-                        try {
-                            List<Address> addressList = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
-                            Log.d("getCountryName", addressList.get(0).getCountryName());
-                            Log.d("getFeatureName", addressList.get(0).getAdminArea());
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-
                         googleMap.addMarker(markerOptions);//konumu işaretçi olarak ekrana işaretler.
                         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,15));
                     }
