@@ -134,6 +134,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onMapReady(@NonNull GoogleMap googleMap) {
                         LatLng latlng= new LatLng(location.getLatitude(),location.getLongitude());
                         MarkerOptions markerOptions = new MarkerOptions().position(latlng).title("Buradasınız");
+                        
+                          Toast.makeText(MainActivity.this, "adres bulunamadı", Toast.LENGTH_SHORT).show();
 
                         googleMap.addMarker(markerOptions);//konumu işaretçi olarak ekrana işaretler.
                         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,15));
